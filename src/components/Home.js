@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Woman from "./../images/woman-laptop.png";
 import OutsideImage from "./../images/outside.png";
 import TrayImage from "./../images/tray.png";
@@ -67,9 +68,9 @@ export default function Home() {
 
         <div className="row">
           <div className="col text-center">
-            <a href="/search-availability" className="btn btn-success">
+            <Link to={"/search-availability"} className="btn btn-success">
               Make Reservation Now
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -25,48 +25,48 @@ export default function App() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link to={"/"} className="nav-link active" aria-current="page">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <Link to={"/about"} className="nav-link">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <Link
+                  to={"#"}
                   className="nav-link dropdown-toggle"
-                  href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Rooms
-                </a>
+                </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="/generals-quarters">
+                    <Link to={"/generals-quarters"} className="dropdown-item">
                       General's Quarters
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/majors-suite">
+                    <Link to={"/majors-suite"} className="dropdown-item">
                       Major's Suite
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/search-availability">
+                <Link to={"/search-availability"} className="nav-link">
                   Search Availability
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/contact">
+                <Link to={"/contact"} className="nav-link">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

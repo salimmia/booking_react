@@ -3,9 +3,9 @@ import React from "react";
 export default function ChooseRoom() {
   return (
     <>
-      <div class="container">
-        <div class="row">
-          <div class="col">
+      <div className="container">
+        <div className="row">
+          <div className="col">
             <h1>Choose a Room</h1>
 
             {/* {{$rooms := index .Data "rooms"}} */}

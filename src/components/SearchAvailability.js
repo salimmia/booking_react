@@ -2,35 +2,35 @@ import React from "react";
 
 export default function SearchAvailability() {
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          <h1 class="mt-3">Search for Availability</h1>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-3"></div>
+        <div className="col-md-6">
+          <h1 className="mt-3">Search for Availability</h1>
 
           <form
             action="/search-availability"
             method="post"
             novalidate
-            class="needs-validation"
+            className="needs-validation"
           >
             {/* <input type="hidden" name="csrf_token" value="{{.CSRFToken}}" /> */}
-            <div class="row">
-              <div class="col">
-                <div class="row" id="reservation-dates">
-                  <div class="col-md-6">
+            <div className="row">
+              <div className="col">
+                <div className="row" id="reservation-dates">
+                  <div className="col-md-6">
                     <input
                       required
-                      class="form-control"
+                      className="form-control"
                       type="text"
                       name="start"
                       placeholder="Arrival"
                     />
                   </div>
-                  <div class="col-md-6">
+                  <div className="col-md-6">
                     <input
                       required
-                      class="form-control"
+                      className="form-control"
                       type="text"
                       name="end"
                       placeholder="Departure"
@@ -42,12 +42,12 @@ export default function SearchAvailability() {
 
             <hr />
 
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" className="btn btn-primary">
               Search Availability
             </button>
           </form>
         </div>
-        <div class="col-md-3"></div>
+        <div className="col-md-3"></div>
       </div>
     </div>
   );
