@@ -10,7 +10,7 @@ const data = {
   Phone: "01521435652",
 };
 export default function ReservationSummary() {
-  const [reservationData, setReservationData] = useState(data);
+  const reservationData = data;
 
   return (
     <div className="container">
