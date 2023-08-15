@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function ChooseRoom() {
+  const [rooms, setRooms] = useState([]);
+
+  useEffect(() => {
+    const headers = new Headers();
+    headers.append("Content-Type", "application/json");
+
+    const requestOptions = {
+      method: "GET",
+      headers: headers,
+    };
+
+    fetch(`http://localhost:8080/search-availability`, requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        setRooms(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <>
       <div className="container">
@@ -8,11 +29,14 @@ export default function ChooseRoom() {
           <div className="col">
             <h1>Choose a Room</h1>
 
-            {/* {{$rooms := index .Data "rooms"}} */}
             <ul>
-              {/* {{range $rooms}}
-                        <li><a href = "/choose-room/{{.ID}}">{{.RoomName}}</a> </li>
-                    {{end}} */}
+              {rooms.map((room) => (
+                <p>
+                  {room.room_name}
+                  {room.created_at}
+                  {room.updated_at}
+                </p>
+              ))}
             </ul>
           </div>
         </div>
